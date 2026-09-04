@@ -20,6 +20,7 @@ namespace PryPosse40926
         private void btnListar_Click(object sender, EventArgs e)
         {
             x.Listar(dgvGrilla);
+            lblTotalDeu.Text = x.CantClientes().ToString();
         }
     }
 }
