@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Security.Policy;
 
 namespace PryPosse40926
 {
@@ -43,6 +44,25 @@ namespace PryPosse40926
             ad.Dispose();
         }
 
+        public int CantClientes()
+        {
+            int c = 0;
+            
+            string DatosLeidos = "";
+            
+            StreamReader ad = new StreamReader(nombreAr);
+            
+            DatosLeidos = ad.ReadLine();
+            DatosLeidos = ad.ReadLine();
+            
+            while (DatosLeidos != null)
+            {
+                c++;
+                DatosLeidos = ad.ReadLine();
+            }
+
+            return c;
+        }
 
     }
 }
