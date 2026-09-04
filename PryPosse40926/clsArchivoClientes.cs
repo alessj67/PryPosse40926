@@ -37,6 +37,7 @@ namespace PryPosse40926
             {
                 vcDatos = DatosLeidos.Split(';');
                 Grilla.Rows.Add(vcDatos[0], vcDatos[1], vcDatos[2], vcDatos[3],);
+                DatosLeidos = ad.ReadLine();
             }
                 
             
@@ -62,6 +63,31 @@ namespace PryPosse40926
             }
 
             return c;
+        }
+        public decimal Tdeuda()
+        {
+            decimal total = 0 ; 
+            string DatosLeidos = "";
+            string[] vcDatos = new string[4];
+
+            StreamReader ad = new StreamReader(nombreAr);
+
+            DatosLeidos = ad.ReadLine();
+
+            while (DatosLeidos != null)
+            {
+                vcDatos = DatosLeidos.Split(';');
+                
+                total = total + Convert.ToDecimal(vcDatos[2]);
+                
+                DatosLeidos = ad.ReadLine();
+            }
+
+
+            ad.Close();
+            ad.Dispose();
+            
+            return total;
         }
 
     }
