@@ -28,5 +28,11 @@ namespace PryPosse40926
             Form lista = new FrmListado();
             lista.Show();
         }
+
+        private void listadoDeClientesDeudoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new FrmDeudores();
+            formulario.Show();
+        }
     }
 }

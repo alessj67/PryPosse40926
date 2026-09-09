@@ -10,31 +10,19 @@ using System.Windows.Forms;
 
 namespace PryPosse40926
 {
-    public partial class FrmListado : Form
+    public partial class FrmDeudores : Form
     {
-        public FrmListado()
+        public FrmDeudores()
         {
             InitializeComponent();
         }
         clsArchivoClientes x = new clsArchivoClientes();
         private void btnListar_Click(object sender, EventArgs e)
         {
-            x.Listar(dgvGrilla);
-            
-            lblCant.Text = x.CantClientes().ToString();
-
+            x.ListarDeudores(dgvGrilla);
             lblTotalD.Text = x.Tdeuda().ToString();
-            lblPromD.Text = x.Promedio().ToString();
-        }
-
-        private void lblPromD_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCant_Click(object sender, EventArgs e)
-        {
-
+            lblCant.Text = x.CantidadDeudores().ToString();
+            lblPromD.Text = x.PromedioDeudores().ToString();
         }
     }
 }

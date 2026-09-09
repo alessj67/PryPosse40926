@@ -33,15 +33,15 @@
             this.lblCantClientes = new System.Windows.Forms.Label();
             this.lblPromDeuda = new System.Windows.Forms.Label();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbConsulta = new System.Windows.Forms.GroupBox();
-            this.btnListar = new System.Windows.Forms.Button();
-            this.lblTotalD = new System.Windows.Forms.Label();
-            this.lblCant = new System.Windows.Forms.Label();
             this.lblPromD = new System.Windows.Forms.Label();
+            this.lblCant = new System.Windows.Forms.Label();
+            this.lblTotalD = new System.Windows.Forms.Label();
+            this.btnListar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.gbConsulta.SuspendLayout();
             this.SuspendLayout();
@@ -89,25 +89,25 @@
             this.dgvGrilla.Size = new System.Drawing.Size(444, 232);
             this.dgvGrilla.TabIndex = 3;
             // 
-            // Column4
+            // Column1
             // 
-            this.Column4.HeaderText = "Deuda";
-            this.Column4.Name = "Column4";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Límite de Crédito ";
-            this.Column3.Name = "Column3";
+            this.Column1.HeaderText = "Código";
+            this.Column1.Name = "Column1";
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Nombre y Apellido";
             this.Column2.Name = "Column2";
             // 
-            // Column1
+            // Column3
             // 
-            this.Column1.HeaderText = "Código";
-            this.Column1.Name = "Column1";
+            this.Column3.HeaderText = "Límite de Crédito ";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Deuda";
+            this.Column4.Name = "Column4";
             // 
             // gbConsulta
             // 
@@ -127,6 +127,33 @@
             this.gbConsulta.TabStop = false;
             this.gbConsulta.Text = "Consulta de datos";
             // 
+            // lblPromD
+            // 
+            this.lblPromD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPromD.Location = new System.Drawing.Point(323, 383);
+            this.lblPromD.Name = "lblPromD";
+            this.lblPromD.Size = new System.Drawing.Size(116, 15);
+            this.lblPromD.TabIndex = 10;
+            this.lblPromD.Click += new System.EventHandler(this.lblPromD_Click);
+            // 
+            // lblCant
+            // 
+            this.lblCant.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCant.Cursor = System.Windows.Forms.Cursors.UpArrow;
+            this.lblCant.Location = new System.Drawing.Point(323, 332);
+            this.lblCant.Name = "lblCant";
+            this.lblCant.Size = new System.Drawing.Size(116, 15);
+            this.lblCant.TabIndex = 9;
+            this.lblCant.Click += new System.EventHandler(this.lblCant_Click);
+            // 
+            // lblTotalD
+            // 
+            this.lblTotalD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotalD.Location = new System.Drawing.Point(323, 294);
+            this.lblTotalD.Name = "lblTotalD";
+            this.lblTotalD.Size = new System.Drawing.Size(116, 13);
+            this.lblTotalD.TabIndex = 8;
+            // 
             // btnListar
             // 
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,31 +164,6 @@
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
-            // 
-            // lblTotalD
-            // 
-            this.lblTotalD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTotalD.Location = new System.Drawing.Point(323, 294);
-            this.lblTotalD.Name = "lblTotalD";
-            this.lblTotalD.Size = new System.Drawing.Size(116, 13);
-            this.lblTotalD.TabIndex = 8;
-            // 
-            // lblCant
-            // 
-            this.lblCant.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCant.Cursor = System.Windows.Forms.Cursors.UpArrow;
-            this.lblCant.Location = new System.Drawing.Point(323, 332);
-            this.lblCant.Name = "lblCant";
-            this.lblCant.Size = new System.Drawing.Size(116, 15);
-            this.lblCant.TabIndex = 9;
-            // 
-            // lblPromD
-            // 
-            this.lblPromD.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPromD.Location = new System.Drawing.Point(323, 383);
-            this.lblPromD.Name = "lblPromD";
-            this.lblPromD.Size = new System.Drawing.Size(116, 15);
-            this.lblPromD.TabIndex = 10;
             // 
             // FrmListado
             // 
