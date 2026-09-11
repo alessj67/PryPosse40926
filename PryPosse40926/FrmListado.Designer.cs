@@ -42,6 +42,7 @@
             this.lblCant = new System.Windows.Forms.Label();
             this.lblTotalD = new System.Windows.Forms.Label();
             this.btnListar = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.gbConsulta.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +113,7 @@
             // gbConsulta
             // 
             this.gbConsulta.BackColor = System.Drawing.Color.RosyBrown;
+            this.gbConsulta.Controls.Add(this.btnReporte);
             this.gbConsulta.Controls.Add(this.lblPromD);
             this.gbConsulta.Controls.Add(this.lblCant);
             this.gbConsulta.Controls.Add(this.lblTotalD);
@@ -165,6 +167,17 @@
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.Location = new System.Drawing.Point(56, 426);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(189, 23);
+            this.btnReporte.TabIndex = 11;
+            this.btnReporte.Text = "Generar Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // FrmListado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,5 +209,6 @@
         private System.Windows.Forms.Label lblPromD;
         private System.Windows.Forms.Label lblCant;
         private System.Windows.Forms.Label lblTotalD;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

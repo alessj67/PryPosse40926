@@ -36,5 +36,11 @@ namespace PryPosse40926
         {
 
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            x.Reporte();
+            MessageBox.Show("Reporte Generado", "nashe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

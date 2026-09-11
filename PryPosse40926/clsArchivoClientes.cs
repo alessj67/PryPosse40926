@@ -10,6 +10,7 @@ using System.Security.Policy;
 namespace PryPosse40926
 {
     internal class clsArchivoClientes
+        //(/../../) directorios
     {
         public string nombreAr = "../../Archivos/Clientes.csv";
         
@@ -35,7 +36,7 @@ namespace PryPosse40926
         {
             string DatosLeidos = "";
             string[] vcDatos = new string[4];
-            
+            MessageBox.Show(Path.GetFullPath(nombreAr));
             StreamReader ad = new StreamReader(nombreAr);
             
             DatosLeidos = ad.ReadLine();
@@ -206,6 +207,36 @@ namespace PryPosse40926
 
             return total / c;
 
+        }
+    
+        public void Reporte()
+        {
+            string DatosLeidos = "";
+            string[] vcDatos = new string[4];
+            
+            StreamWriter reporte = new StreamWriter("Reporte.csv");
+            StreamReader ad = new StreamReader(nombreAr);
+
+            reporte.WriteLine("Listado de Clientes");
+            reporte.WriteLine("Codigo;Nombre;Deuda;Limite");
+
+            DatosLeidos = ad.ReadLine();
+
+             while(DatosLeidos != null)
+             {
+                vcDatos = DatosLeidos.Split(';');
+                reporte.Write(vcDatos[0] + ";");
+                reporte.Write(vcDatos[1] + ";");
+                reporte.Write(vcDatos[2] + ";");
+                reporte.WriteLine(vcDatos[3] + ";");
+                
+                DatosLeidos = ad.ReadLine();
+             }
+
+            ad.Close();
+            ad.Dispose();
+            reporte.Close();    
+            reporte.Dispose();
         }
     }
 }
