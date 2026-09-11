@@ -39,6 +39,7 @@ namespace PryPosse40926
             MessageBox.Show(Path.GetFullPath(nombreAr));
             StreamReader ad = new StreamReader(nombreAr);
             
+            
             DatosLeidos = ad.ReadLine();
 
             while (DatosLeidos != null )
@@ -213,11 +214,15 @@ namespace PryPosse40926
         {
             string DatosLeidos = "";
             string[] vcDatos = new string[4];
-            
+
+            Int32 cant = 0;
+            Decimal total = 0;
+
             StreamWriter reporte = new StreamWriter("Reporte.csv");
             StreamReader ad = new StreamReader(nombreAr);
 
             reporte.WriteLine("Listado de Clientes");
+            reporte.WriteLine("");
             reporte.WriteLine("Codigo;Nombre;Deuda;Limite");
 
             DatosLeidos = ad.ReadLine();
@@ -229,12 +234,20 @@ namespace PryPosse40926
                 reporte.Write(vcDatos[1] + ";");
                 reporte.Write(vcDatos[2] + ";");
                 reporte.WriteLine(vcDatos[3] + ";");
-                
+                cant++;
+                total = total+ Convert.ToDecimal(vcDatos[2]);
                 DatosLeidos = ad.ReadLine();
              }
 
             ad.Close();
             ad.Dispose();
+            reporte.WriteLine("");
+            reporte.Write("Total de deuda: ;;");
+            reporte.WriteLine(total);
+            reporte.Write("Cantidad de clientes:;;");
+            reporte.WriteLine(cant);
+            reporte.Write("Promedio de deuda:;;");
+            reporte.WriteLine(total / cant);
             reporte.Close();    
             reporte.Dispose();
         }
